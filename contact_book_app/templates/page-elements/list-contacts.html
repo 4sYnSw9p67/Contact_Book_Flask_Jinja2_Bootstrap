@@ -1,0 +1,58 @@
+<div class="w-100 text-center">
+    <h1 class="mb-5">Search
+        <span class="text-primary">Contacts</span>
+    </h1>
+</div>
+<div class="container input-group col-md-5 mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">
+            <span class="fa fa-search form-control-feedback">
+            </span>
+        </span>
+    </div>
+    <input type="text" id="seach-box-edit" class="form-control" placeholder="Search...">
+</div>
+<form class="mb-4" action="/edit" method="POST">
+    <table id="table-to-edit" class="table table-striped">
+        <thead class="bg-primary">
+            <tr>
+                <th scope="col" class="text-center">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Birthday</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Profession</th>
+                <th scope="col">Interests</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for index, contact in contactsdb.items() %}
+            <td><span class="input-group-text">{{ index }}</span></td>
+            <td>
+                {{ contact[1] }}
+            </td>
+            <td>
+                {{ contact[2] }}
+            </td>
+            <td>
+                {{ contact[3] }}
+            </td>
+            <td>
+                {{ contact[4] }}
+            </td>
+            <td>
+                {{ contact[5] }}
+            </td>
+            <td>
+                {{ contact[6] }}
+            </td>
+            <td>
+                {{ contact[7] }}
+            </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</form>
+</div>

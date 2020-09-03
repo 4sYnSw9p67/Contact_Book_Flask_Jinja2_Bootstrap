@@ -1,0 +1,128 @@
+<div class="container col-md-8 order-md-1">
+    <div class="w-100 text-center">
+        <h1 class="mb-0">ADD
+            <span class="text-primary">Contacts</span>
+        </h1>
+    </div>
+    <div class="jumbotron mt-1">
+
+        <h4 class="mb-3">Contact Indormation</h4>
+        <form class="needs-validation" novalidate="" action="/add" method="POST">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="firstName">First name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value=""
+                        required="">
+                    <div class="invalid-feedback">
+                        Valid first name is required.
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="lastName">Last name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value=""
+                        required="">
+                    <div class="invalid-feedback">
+                        Valid last name is required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="birthday">Birthday</label>
+                    <input type="text" class="form-control datepicker" id="birthday" name="birthday" placeholder=""
+                        required="">
+                    <div class="invalid-feedback">
+                        Please enter your birthday.
+                    </div>
+                </div>
+                <div class="col-md-8 mb-3">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St"
+                        required="">
+                    <div class="invalid-feedback">
+                        Please enter a valid address.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5 mb-3">
+                    <label for="country">Country</label>
+                    <select class="custom-select d-block w-100" id="country" name="country" required="">
+                        <option value="">Choose...</option>
+                        <option>Bulgaria</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid country.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="city">City</label>
+                    <select class="custom-select d-block w-100" id="city" name="city" required="">
+                        <option value="">Choose...</option>
+                        <option>Sofia</option>
+                        <option>Plovdiv</option>
+                        <option>Burgas</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="zip">Zip</label>
+                    <input type="text" class="form-control" id="zip" name="zip" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Zip code required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="email">Email <span class="text-muted"></span></label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com">
+                    <div class="invalid-feedback">
+                        Please enter a valid email address for shipping updates.
+                    </div>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <label for="code">Code</label>
+                    <select class="custom-select d-block w-100" id="code" name="code" required="">
+                        <option value="">Choose...</option>
+                        <option>+359</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please provide a valid code.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="phone">Phone</label>
+                    <input type="text" class="form-control" id="phone" name="phone" placeholder="" required="">
+                    <div class="invalid-feedback">
+                        Phone number required.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="profession">Profession</label>
+                <input type="text" class="form-control" id="profession" name="profession" placeholder="" required="">
+                <div class="invalid-feedback">
+                    Please enter your profession.
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="interests">Interests <span class="text-muted small">(Please separate with "," for multiple
+                        interests)</span></label>
+                <input type="text" class="form-control" id="interests" name="interests" placeholder="" required="">
+                <div class="invalid-feedback">
+                    Please enter your interests.
+                </div>
+            </div>
+
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Add Contact</button>
+        </form>
+    </div>
+</div>

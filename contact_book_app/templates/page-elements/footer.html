@@ -1,0 +1,36 @@
+<!--</div>-->
+
+<!-- Bootstrap core JavaScript -->
+<script src="../static/vendor/jquery/jquery.min.js"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="../static/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="../static/js/cb.min.js"></script>
+<script src="../static/js/error-page.js"></script>
+
+<script>
+    $(function () {
+        $(".datepicker").datepicker({
+            dateFormat: "dd/mm/yy"
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $("#seach-box-edit").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#table-to-edit tbody tr").filter(function () {
+                $(this).toggle($(this).html().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+
+</body>
+
+</html>
